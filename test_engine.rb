@@ -36,19 +36,20 @@ class TestEngine
   def initialize(folder, test_folder)
     @folder = folder
     @test_folder = test_folder
-    @test_begin = "class NoTest < Minitest::Test\ndef test_instance"
+    @test_begin = "< Minitest::Test\ndef test_instance"
     @test_end = "end\nend"
   end
 
   def test
     Dir.glob(@folder + '/*.rb').map do |file|
-      pair = TestPair.new(file.sub(@folder + '/', ''), @folder, @test_folder)
-      test_finalize(pair.substitute)
+      pair = TestPair.new(file.sub(@folder + '/', ''),
+                          @folder, @test_folder)
+      test_finalize(pair.substitute, pair.test_filename.classify)
     end
   end
 
-  def test_finalize(test_string)
-    eval @test_begin + "\n" + test_string + "\n" + @test_end
+  def test_finalize(test_string, test_name)
+    eval 'class #{test_filename} ' + @test_begin + "\n" + test_string + "\n" + @test_end
   end
 end
 
