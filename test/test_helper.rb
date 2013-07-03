@@ -1,16 +1,9 @@
 require 'minitest/autorun'
-require 'minitest/unit'
+require 'active_support/core_ext/string'
 
-# files to test
-require 'the_truth'
-require 'reverse'
-require 'hello_world'
-require 'maximum'
-require 'nil_values'
-require 'map'
-require 'fizz_buzz'
-require 'mis_mtd'
-require 'black_jack'
-require 'mis_mtd_two'
-require 'temperature_bot'
-require 'injected_and_rejected'
+class << Minitest::Test
+  def const_missing(name)
+    require name.to_s.underscore
+    return Object.const_get(name)
+  end
+end
