@@ -1,5 +1,5 @@
 class TheTruth
   def solution
-    false # true
+    true
   end
 end

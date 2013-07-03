@@ -1,5 +1,5 @@
 class HelloWorld
   def solution(str)
-     str # str.upcase
+     str.upcase
   end
 end

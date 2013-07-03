@@ -1,5 +1,5 @@
 class Reverse
   def solution
-    'wrong string' # 'chunky bacon'
+    'chunky bacon'
   end
 end

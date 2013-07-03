@@ -1,5 +1,5 @@
 class Maximum
   def solution(arr)
-    arr[0] # arr.max
+    arr.max
   end
 end

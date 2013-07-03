@@ -1,5 +1,5 @@
 class NilValues
   def solution
-    true # false
+    false
   end
 end
