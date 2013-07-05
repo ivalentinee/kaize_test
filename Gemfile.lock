@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/vemperor/rubeque_parser.git
+  revision: 0610c976da4650f13a3839d674ab231c950e95c6
+  specs:
+    rubeque_parser (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -32,4 +38,5 @@ DEPENDENCIES
   coveralls
   minitest
   rake
+  rubeque_parser!
   simplecov
