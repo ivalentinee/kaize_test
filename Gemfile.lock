@@ -18,6 +18,7 @@ GEM
     rake (10.1.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rubeque_parser (0.0.1)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -32,4 +33,5 @@ DEPENDENCIES
   coveralls
   minitest
   rake
+  rubeque_parser
   simplecov
